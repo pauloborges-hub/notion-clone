@@ -3,6 +3,7 @@
 
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { useUser } from "@clerk/nextjs"
+import Breadcrumbs from "./Breadcrumbs";
 
 function Header() {
    // custom hook from Clerk
@@ -17,6 +18,8 @@ function Header() {
          )}
 
          {/* Breadcrumbs */}
+         <Breadcrumbs />
+
          <div>
             <SignedOut>
                <SignInButton />
