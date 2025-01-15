@@ -1,5 +1,6 @@
 "use client";
 
+import LiveCursorProvider from "./LiveCursorProvider";
 import LoadingSpinner from "./LoadingSpinner";
 import {
    ClientSideSuspense,
@@ -21,7 +22,7 @@ function RoomProvider({
          }}
       >
          <ClientSideSuspense fallback={<LoadingSpinner />}>
-            {children}
+            <LiveCursorProvider>{children}</LiveCursorProvider>
          </ClientSideSuspense>
 
       </RoomProviderWrapper>
