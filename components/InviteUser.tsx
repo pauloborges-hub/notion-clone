@@ -71,7 +71,6 @@ function InviteUser() {
                </Button>
             </form>
 
-
          </DialogContent>
       </Dialog>
 
