@@ -11,6 +11,7 @@ import useOwner from "@/lib/useOwner";
 import DeleteDocument from "./DeleteDocument";
 import InviteUser from "./InviteUser";
 import ManageUsers from "./ManageUsers";
+import Avatars from "./Avatars";
 
 function Document({ id }: { id: string }) {
    const [data, loading, error] = useDocumentData(doc(db, "documents", id));
@@ -42,7 +43,6 @@ function Document({ id }: { id: string }) {
             <form
                className="flex flex-1 space-x-2"
                onSubmit={updateTitle}>
-               {/* update title */}
                <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
@@ -64,7 +64,7 @@ function Document({ id }: { id: string }) {
 
          <div className="flex max-w-6xl mx-auto justify-between items-center mb-5">
             <ManageUsers />
-            {/* Avatars */}
+            <Avatars />
          </div>
 
          <hr className="pb-10"></hr>
